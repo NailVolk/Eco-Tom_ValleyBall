@@ -50,6 +50,18 @@ if (location.protocol.substr(0, 4) === "file")
 			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
 		</div>
 	</noscript>
+    <script>
+        // Only disable workers and WebGL on Android Telegram WebView
+        if (navigator.userAgent.includes("Android") && navigator.userAgent.includes("Telegram")) {
+            window.Worker = undefined;
+            HTMLCanvasElement.prototype.getContext = (function(orig) {
+                return function(type, opts) {
+                    if (type === 'webgl' || type === 'webgl2') return orig.call(this, '2d', opts);
+                    return orig.call(this, type, opts);
+                };
+            })(HTMLCanvasElement.prototype.getContext);
+        }
+    </script>
 	    <script src="scripts/modernjscheck.js"></script>
     	    <script src="scripts/supportcheck.js"></script>
             <!-- Загрузка движка Construct 3 -->
