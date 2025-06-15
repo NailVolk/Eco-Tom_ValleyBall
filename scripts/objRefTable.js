@@ -9,12 +9,12 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Mouse,
 		C3.Plugins.Text,
 		C3.Plugins.Button,
-		C3.Plugins.Button.Cnds.OnClicked,
+		C3.Plugins.Touch,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.Mouse.Cnds.OnObjectClicked,
-		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Behaviors.Platform.Acts.SetGravityAngle,
@@ -49,7 +49,6 @@ self.C3_JsPropNameTable = [
 	{ОстЖиз3: 0},
 	{ОтличноПоиграли: 0},
 	{ИтоговыйСчет2: 0},
-	{Спрайт2: 0},
 	{Спрайт5: 0},
 	{ЕщеРаз: 0},
 	{да: 0},
@@ -57,6 +56,8 @@ self.C3_JsPropNameTable = [
 	{КнопкаНачать: 0},
 	{Начать: 0},
 	{Кнопка: 0},
+	{ТомСидит: 0},
+	{Тач: 0},
 	{ПропускМячей: 0}
 ];
 
@@ -79,12 +80,13 @@ self.InstanceType = {
 	ОстЖиз3: class extends self.ISpriteInstance {},
 	ОтличноПоиграли: class extends self.ITextInstance {},
 	ИтоговыйСчет2: class extends self.ITextInstance {},
-	Спрайт2: class extends self.ISpriteInstance {},
 	Спрайт5: class extends self.ISpriteInstance {},
 	ЕщеРаз: class extends self.ITextInstance {},
 	да: class extends self.ITextInstance {},
 	СтартовыйТекст: class extends self.ITextInstance {},
 	КнопкаНачать: class extends self.ISpriteInstance {},
 	Начать: class extends self.ITextInstance {},
-	Кнопка: class extends self.IButtonInstance {}
+	Кнопка: class extends self.IButtonInstance {},
+	ТомСидит: class extends self.ISpriteInstance {},
+	Тач: class extends self.IInstance {}
 }
