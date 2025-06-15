@@ -21,7 +21,21 @@
 
 	
 </head> 
- 
+
+<script>
+console.log('[Core] Construct 3 loading...');
+
+window.addEventListener('C3_Ready', function() {
+    console.log('[Core] C3 fully loaded!');
+    alert('Игра загружена!'); // Удалите после теста
+});
+
+if (!window.C3_Instance) {
+    console.error('[Core] C3 engine NOT detected!');
+    alert('Ошибка: движок не загрузился');
+}
+</script>
+	
 <body>
 
 	
