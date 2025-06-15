@@ -19,23 +19,9 @@
 	<link rel="stylesheet" href="style.css">
 
 
-	
+
 </head> 
-
-<script>
-console.log('[Core] Construct 3 loading...');
-
-window.addEventListener('C3_Ready', function() {
-    console.log('[Core] C3 fully loaded!');
-    alert('Игра загружена!'); // Удалите после теста
-});
-
-if (!window.C3_Instance) {
-    console.error('[Core] C3 engine NOT detected!');
-    alert('Ошибка: движок не загрузился');
-}
-</script>
-	
+ 
 <body>
 
 	
@@ -53,10 +39,11 @@ if (location.protocol.substr(0, 4) === "file")
 			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
 		</div>
 	</noscript>
-	<script src="scripts/modernjscheck.js"></script>
-	<script src="scripts/supportcheck.js"></script>
-	<script src="scripts/main.js" type="module"></script>
-	<script src="android-fix.js"></script>
-
-</body> 
+	    <script src="scripts/modernjscheck.js"></script>
+    <script src="scripts/supportcheck.js"></script>
+    <!-- Загрузка движка Construct 3 -->
+    <script src="scripts/c3runtime.js"></script>
+    <!-- Ваш основной скрипт без module -->
+    <script src="scripts/main.js"></script>
+</body>
 </html>
