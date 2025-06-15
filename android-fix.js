@@ -2,6 +2,55 @@ console.log('[AndroidFix] Script loaded');
 console.log('[AndroidFix] UserAgent:', navigator.userAgent);
 console.log('[AndroidFix] Telegram WebApp detected:', !!window.Telegram?.WebApp);
 
+// Создаем контейнер для логов
+const logContainer = document.createElement('div');
+logContainer.id = 'android-debug-logs';
+logContainer.style.cssText = `
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 90%;
+    max-height: 30%;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.7);
+    color: lime;
+    padding: 8px;
+    font-family: monospace;
+    font-size: 12px;
+    z-index: 99999;
+    border-radius: 5px;
+    display: none;
+`;
+document.body.appendChild(logContainer);
+
+// Переопределяем console.log
+const originalConsoleLog = console.log;
+console.log = function(...args) {
+    originalConsoleLog.apply(console, args);
+    const message = args.join(' ');
+    logContainer.innerHTML += `[LOG] ${message}<br>`;
+    logContainer.scrollTop = logContainer.scrollHeight;
+};
+
+// Кнопка для показа/скрытия логов
+const toggleBtn = document.createElement('button');
+toggleBtn.textContent = 'DEBUG';
+toggleBtn.style.cssText = `
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99999;
+    padding: 5px 10px;
+    background: #f00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+`;
+toggleBtn.addEventListener('click', () => {
+    logContainer.style.display = logContainer.style.display === 'none' ? 'block' : 'none';
+});
+document.body.appendChild(toggleBtn);
+
 function applyAndroidFixes() {
     console.log('[AndroidFix] Applying fixes...');
     
