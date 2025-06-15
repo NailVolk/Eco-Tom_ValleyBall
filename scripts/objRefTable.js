@@ -9,12 +9,12 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Mouse,
 		C3.Plugins.Text,
 		C3.Plugins.Button,
-		C3.Plugins.Button.Cnds.OnClicked,
+		C3.Plugins.Touch,
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.Mouse.Cnds.OnObjectClicked,
-		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Behaviors.Platform.Acts.SetGravityAngle,
@@ -57,6 +57,7 @@ self.C3_JsPropNameTable = [
 	{Начать: 0},
 	{Кнопка: 0},
 	{ТомСидит: 0},
+	{Тач: 0},
 	{ПропускМячей: 0}
 ];
 
@@ -86,5 +87,6 @@ self.InstanceType = {
 	КнопкаНачать: class extends self.ISpriteInstance {},
 	Начать: class extends self.ITextInstance {},
 	Кнопка: class extends self.IButtonInstance {},
-	ТомСидит: class extends self.ISpriteInstance {}
+	ТомСидит: class extends self.ISpriteInstance {},
+	Тач: class extends self.IInstance {}
 }
