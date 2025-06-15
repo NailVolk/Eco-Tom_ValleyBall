@@ -7,6 +7,17 @@
 	
 	<!-- Made with Construct, the game and app creator :: https://www.construct.net -->
 	<meta name="generator" content="Scirra Construct">
+    <script>
+        // Disable Web Workers for Android WebView
+        window.Worker = undefined;
+        // Force Canvas2D instead of WebGL
+        HTMLCanvasElement.prototype.getContext = (function(orig) {
+            return function(type, opts) {
+                if (type === 'webgl' || type === 'webgl2') return orig.call(this, '2d', opts);
+                return orig.call(this, type, opts);
+            };
+        })(HTMLCanvasElement.prototype.getContext);
+    </script>
 
 
 
