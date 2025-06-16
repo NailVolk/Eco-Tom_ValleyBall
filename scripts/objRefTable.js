@@ -61,7 +61,6 @@ self.C3_JsPropNameTable = [
 	{ОстЖиз4: 0},
 	{ОстЖиз5: 0},
 	{Спрайт2: 0},
-	{Спрайт6: 0},
 	{ПропускМячей: 0}
 ];
 
@@ -95,6 +94,5 @@ self.InstanceType = {
 	Тач: class extends self.IInstance {},
 	ОстЖиз4: class extends self.ISpriteInstance {},
 	ОстЖиз5: class extends self.ISpriteInstance {},
-	Спрайт2: class extends self.ISpriteInstance {},
-	Спрайт6: class extends self.ISpriteInstance {}
+	Спрайт2: class extends self.ISpriteInstance {}
 }
