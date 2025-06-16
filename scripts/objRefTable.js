@@ -12,8 +12,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.System.Cnds.Every,
-		C3.Plugins.System.Acts.CreateObject,
 		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.System.Acts.AddVar,
@@ -25,7 +23,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.SetOpacity,
 		C3.Plugins.System.Acts.SubVar,
-		C3.Plugins.System.Acts.ResetGlobals
+		C3.Plugins.System.Acts.ResetGlobals,
+		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.Sprite.Acts.Spawn
 	];
 };
 self.C3_JsPropNameTable = [
@@ -58,6 +58,10 @@ self.C3_JsPropNameTable = [
 	{Кнопка: 0},
 	{ТомСидит: 0},
 	{Тач: 0},
+	{ОстЖиз4: 0},
+	{ОстЖиз5: 0},
+	{Спрайт2: 0},
+	{Спрайт6: 0},
 	{ПропускМячей: 0}
 ];
 
@@ -88,5 +92,9 @@ self.InstanceType = {
 	Начать: class extends self.ITextInstance {},
 	Кнопка: class extends self.IButtonInstance {},
 	ТомСидит: class extends self.ISpriteInstance {},
-	Тач: class extends self.IInstance {}
+	Тач: class extends self.IInstance {},
+	ОстЖиз4: class extends self.ISpriteInstance {},
+	ОстЖиз5: class extends self.ISpriteInstance {},
+	Спрайт2: class extends self.ISpriteInstance {},
+	Спрайт6: class extends self.ISpriteInstance {}
 }

@@ -1247,16 +1247,9 @@ function or(l, r)
 }
 
 self.C3_ExpressionFuncs = [
-		() => 1.9,
-		() => 0,
-		() => 350,
-		() => -25,
-		() => "",
-		() => 2.4,
-		() => 167,
-		() => -20,
 		() => 1,
 		() => 200,
+		() => -20,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and("Отбито: ", v0.GetValue());
@@ -1265,8 +1258,14 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => and("Твой счет: ", v0.GetValue());
 		},
+		() => 5,
+		() => 4,
+		() => 0,
 		() => 3,
-		() => 2
+		() => 2,
+		() => 2.4,
+		() => "",
+		() => 1.9
 ];
 
 
