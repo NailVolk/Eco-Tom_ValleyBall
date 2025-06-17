@@ -5,7 +5,7 @@ const API = "https://script.google.com/macros/s/AKfycbzL42OTEY9Wyv-Fvds-jdUrDbjG
 function saveScore(score){
   const payload = {␊
     score,␊
-    initData: (typeof Telegram !== "undefined" && Telegram.WebApp ? Telegram.WebApp.initData : "")   // Telegram отдаёт сам
+    initData: window.Telegram?.WebApp?.initData || ""  // Telegram отдаёт сам
   };␊
   return fetch(API, {
     method:"POST",
