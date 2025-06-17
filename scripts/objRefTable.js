@@ -10,6 +10,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text,
 		C3.Plugins.Button,
 		C3.Plugins.Touch,
+		C3.Plugins.Browser,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.Sprite.Acts.SetMirrored,
@@ -22,6 +23,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.SetOpacity,
+		C3.JavaScriptInEvents.событияигра_Event12_Act2,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.System.Cnds.Every,
@@ -61,6 +63,7 @@ self.C3_JsPropNameTable = [
 	{ОстЖиз4: 0},
 	{ОстЖиз5: 0},
 	{Спрайт2: 0},
+	{Браузер: 0},
 	{ПропускМячей: 0}
 ];
 
@@ -94,5 +97,6 @@ self.InstanceType = {
 	Тач: class extends self.IInstance {},
 	ОстЖиз4: class extends self.ISpriteInstance {},
 	ОстЖиз5: class extends self.ISpriteInstance {},
-	Спрайт2: class extends self.ISpriteInstance {}
+	Спрайт2: class extends self.ISpriteInstance {},
+	Браузер: class extends self.IInstance {}
 }
