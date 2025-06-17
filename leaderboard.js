@@ -3,10 +3,10 @@ const API = "https://script.google.com/macros/s/AKfycbzL42OTEY9Wyv-Fvds-jdUrDbjG
 
 // === отправить очки =========================
 function saveScore(score){
-  const payload = {
-    score,
-    initData: Telegram.WebApp.initData   // Telegram отдаёт сам
-  };
+  const payload = {␊
+    score,␊
+    initData: (typeof Telegram !== "undefined" && Telegram.WebApp ? Telegram.WebApp.initData : "")   // Telegram отдаёт сам
+  };␊
   return fetch(API, {
     method:"POST",
     headers:{"Content-Type":"application/json"},
