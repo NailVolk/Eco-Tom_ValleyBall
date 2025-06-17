@@ -19,3 +19,8 @@ async function getTop(){
   const res = await fetch(API);
   return await res.json();   // [[id,name,score],…]
 }
+
+// Support CommonJS require in tests
+if (typeof module !== "undefined") {
+  module.exports = { saveScore, getTop };
+}
