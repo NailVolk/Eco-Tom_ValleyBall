@@ -4,7 +4,7 @@ const scriptsInEvents = {
 
 	async событияигра_Event12_Act2(runtime, localVars)
 	{
-		saveScore(runtime.globalVars.Счет);   // если переменная очков называется иначе — поменяйте имя
+		saveScore(runtime.globalVars.score);   // если переменная очков называется иначе — поменяйте имя
 	}
 };
 
