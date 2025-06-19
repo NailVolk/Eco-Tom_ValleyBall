@@ -13,6 +13,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Acts.GoToLayout,
+		C3.JavaScriptInEvents.событияигра_Event1_Act2,
 		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.System.Acts.AddVar,
@@ -64,8 +65,8 @@ self.C3_JsPropNameTable = [
 	{ОстЖиз5: 0},
 	{Спрайт2: 0},
 	{Браузер: 0},
-	{score: 0},
-	{ПропускМячей: 0}
+	{ПропускМячей: 0},
+	{initData: 0}
 ];
 
 self.InstanceType = {
