@@ -1,5 +1,5 @@
 // URL вашего Apps Script:
-const API = "https://script.google.com/macros/s/AKfycbzL42OTEY9Wyv-Fvds-jdUrDbjGBFRcFNCCX6IZtqj3CbZTpEfjVTnmaClvSgNvaq_e/exec";
+const API = "https://script.google.com/macros/s/AKfycbwScLIkaWvwwGtUG0WpFLjfeYYx5IuTIeZ8darIF5bQYbIl0qnogC54gusXXRKiwim6/exec";
 
 globalThis.saveScore = function (score) {
     const payload = {
